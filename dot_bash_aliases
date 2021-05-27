@@ -1,0 +1,9 @@
+# bash
+
+function avex () {
+	aws-vault exec "emg-$1-sso-$2" "${@:3}"
+}
+
+function avex2 () {
+	envchain atlas aws-vault exec "emg-$1-sso-$2" "${@:3}"
+}
